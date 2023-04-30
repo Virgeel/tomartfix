@@ -1,0 +1,286 @@
+input[type=submit]{
+    width: 50.5%;
+    background-color: #333333;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: Poppins;
+}
+
+input[type=delete]{
+  padding-top:3;
+  text-align: center;
+  width: 70;
+  height: 28;
+  border:none;
+  background-color: #E64A3B;
+  border-radius:5px;
+  color:white;
+  font-family: Poppins;
+  font-weight:400;
+  font-size: 15;
+  cursor : pointer;
+}
+
+input[type=delete]:hover{
+  box-shadow: 0 0 20px #E64A3B;
+  background-color: #E64A3B;
+ 
+}
+
+.search{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+.formbar{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+  .input-box{
+     display: -ms-flexbox;
+     display:flex;
+    width: 100%;
+    padding:10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: Poppins;
+  }
+
+  .input-box:focus{
+    border-color: 1px solid black;
+  }
+
+  .input-field{
+    border:none;
+    border-radius:10px;
+    padding-left:20px;
+    height: 50px;
+    width: 350px;
+  }
+
+  .input-field:focus{
+    border-color: 1px solid black;
+  }
+
+  input[type=number], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: Poppins;
+  }
+
+
+
+
+  input[type=submit]:hover {
+    background-color: #000000;
+  }
+
+
+.background {
+    padding: 0;
+    margin: 0;
+    height: 1000px;
+    background-image : linear-gradient(white, #C9E265)
+}
+
+button:hover {
+    color: white;
+    box-shadow: 0 0 20px #C9E265;
+    background-color: #FFDE45;
+  }
+  
+
+.loginbutton{
+    width: 200px;
+    height: 75px;
+    color: white;
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.loginbg{
+    position:absolute;
+    width: 1100;
+    height: 960;
+    background-image : url("../images/bucket.png");
+    background-size: 1225px;
+    background-repeat: no-repeat;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.bgregister{
+    background-image: url("../images/buahbg.jpg");
+    background-size: 1225px;
+    box-shadow: inset 0 0 0 1000px rgba(255,255,255,0.6);
+}
+
+.parent{
+    display: flex;
+}
+
+
+
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #a16468;
+  }
+
+.bgdashboard{
+  background-color: #eef2df;
+  background-size: cover;
+}
+
+.sidebardashboard{
+  padding: 40px;
+  width: 225;
+  height: 784;
+  background-color: white;
+  border-radius:25px;
+  box-shadow: 5px 10px 18px #dbdbdb;
+}
+
+.row{
+  display : flex;
+  padding-top : 20px;
+}
+
+
+
+.column{
+  flex : 50%;
+  height: 300px;
+}
+
+button[type="submit"]{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.profilbar{
+  width: 300;
+  height: 70;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 5px 10px 18px #dbdbdb;
+  font-family: Poppins;
+}
+
+a{
+  text-decoration: none;
+}
+
+.addbutton{
+  width: 177;
+  height: 48;
+  border-radius: 15px;
+  background-color: #B3C279;
+  font-family: Poppins;
+  font-weight: semi-bold;
+  color: white;
+  text-align: center;
+}
+
+.sidebarrow{
+  color:#5A5F49;
+  display : flex;
+  padding-top : 20px;
+}
+
+.sidebarrow.active{
+  color : #B3C279
+  
+}
+
+.row.active{
+  color : #B3C279;
+  
+  
+
+}
+
+.delbutton{
+  width: 60;
+  height: 25;
+  border:none;
+  background-color: #E64A3B;
+  border-radius:5px;
+  color:white;
+  font-family: Poppins;
+  font-weight:400;
+  font-size: 15;
+}
+
+.delbutton:hover{
+  background-color: #E64A3B;
+}
+
+.editbutton{
+  padding-top:3;
+  text-align: center;
+  width: 60;
+  height: 25;
+  border:none;
+  background-color: #1ACA8A;
+  border-radius:5px;
+  color:white;
+  font-family: Poppins;
+  font-weight:400;
+  font-size: 15;
+  cursor:pointer;
+}
+
+.editbutton:hover{
+  box-shadow: 0 0 20px #1ACA8A;
+  background-color: #1ACA8A;
+}
+
+.penjualanbox{
+ font-family: Poppins;
+ font-weight: bold;
+  width: 300px;
+  height: 750px;
+  background-color: white;
+  border-radius:15px;
+  color : #5A5F49;
+  box-shadow: 5px 10px 18px #dbdbdb;
+}
+
+.half-circle {
+  position:absolute;
+  top:80%;
+  left:70%;
+  width: 500px;
+  height: 250px;
+  border-radius: 250px 250px 0 0;
+  background-color: #d6e3a6;
+  
+}
