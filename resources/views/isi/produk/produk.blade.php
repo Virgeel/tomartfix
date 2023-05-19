@@ -2,50 +2,48 @@
 
 @section('isidb')
 
-<div style="position: absolute;right:5%;left:23.5%; top : 5.5%;">
+<div style="grid-container-content grid-item-left">
 
-    <div class="parent">
+    <div class="item2" style="padding-top:50px;">
+        <div class="parent">
 
-        <div  style="bottom : 200%;width:700px;text-align:left;opacity : 0.5">
-            <div class="parent">
-    
-                <div style="padding-top:10px;font-size:17;padding-left:20px;color:5A5F49">
-                    <form action = "/dashboard/produk">
-                        <div class="parent">
-    
-    
-                        
-                            <input class="search" type="text" placeholder="Cari Produk" name="search" style="font-size:17;width:650px;height:60px;border-top-left-radius:15px;border-top-right-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:15px;background-color:#B3C279" value="{{request('search')}}">
-
-                            <div style="padding-top:8px;">
-                                <button style="background-color:#B3C279;height:60px;width:50px;border-top-right-radius:15px;border-bottom-right-radius:15px;border:none;">
-                                    <iconify-icon icon="il:search" height="20" style="color:#5A5F49"></iconify-icon> 
-                                </button>
-                            </div>
-                        <div style="padding-left:535px;">
+            <div  style="bottom : 200%;width:700px;text-align:left;opacity : 0.5">
+                <div class="parent">
+        
+                    <div style="padding-top:10px;font-size:17;padding-left:20px;color:5A5F49">
+                        <form action = "/dashboard/produk">
+                            <div class="parent">
+        
+        
                             
-                        
-                        </div>
-                    </div>
-                    </form>   
-                    </div>
-                
-               
+                                <input class="search" type="text" placeholder="Cari Produk" name="search" style="font-size:17;width:650px;height:60px;border-top-left-radius:15px;border-top-right-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:15px;background-color:#B3C279" value="{{request('search')}}">
     
-      
+                                <div style="padding-top:8px;">
+                                    <button style="background-color:#B3C279;height:60px;width:50px;border-top-right-radius:15px;border-bottom-right-radius:15px;border:none;">
+                                        <iconify-icon icon="il:search" height="20" style="color:#5A5F49"></iconify-icon> 
+                                    </button>
+                                </div>
+                            <div style="padding-left:535px;">
+                                
+                            
+                            </div>
+                            </div>
+                        </form>   
+                    </div>
+                </div>
+            </div>
+        <div style="padding-left:500px;">
+            <a href="/dashboard/produk/tambah">
+            <div class="addbutton" style=>
+                <div style="padding-top:10px;font-size:15;">
+                Tambah Produk
+                </div>
+            </div>
+            </a>
             
         </div>
     </div>
-    <div style="padding-left:500px;">
-        <a href="/dashboard/produk/tambah">
-        <div class="addbutton" style=>
-            <div style="padding-top:10px;font-size:15;">
-            Tambah Produk
-            </div>
-        </div>
-    </a>
-        
-    </div>
+    
     
     
     
@@ -56,9 +54,8 @@
 @if($products -> count())
 
 <div style="padding-top:50px" type="hidden">
-
-
 </div>
+<div class="item3 grid-item-left">
     <table style="width:1400px; background-color:white;border-collapse:collapse; text-align:left;">
 
         <thead>
@@ -188,6 +185,9 @@
 
 
     @endif
+
+</div>
+    
 
     
 

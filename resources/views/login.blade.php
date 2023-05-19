@@ -7,8 +7,8 @@
     Login Tomart
 </title>
 
-<body style="margin: 0;">
-    <div class="loginbg">
+<body class="grid-container-login" style="margin: 0;">
+    <div class="loginbg item1login">
         <div style="padding-top:300px;padding-left:200px;">
             <img src="{{asset('images/comma.png')}}" width="105" height="74">
             <img src="{{asset('images/comma.png')}}" width="105" height="74">
@@ -20,7 +20,7 @@ mulailah dari mana kamu berada.
         </div>
     </div>
 
-<div style="padding-left:1200px;padding-top:200px">
+<div class="grid-item item2login" style="padding-top:200px" >
 <div style="font-weight:bold;font-size:25px;font-family:'Poppins">
     Selamat Datang
 
@@ -41,7 +41,7 @@ mulailah dari mana kamu berada.
     <br>
     <div class="input-box">
             
-            <iconify-icon icon="ic:outline-email" height="30" style="color:gray;position: absolute;padding:10px;"></iconify-icon>
+            <iconify-icon icon="ic:outline-email" height="30" style="color:gray;padding:10px;position: absolute;"></iconify-icon>
             <input type="email" class="input-field" id="email" name="email" placeholder="Masukkan email" style="padding-left:50px;" >
        
             @error('email')
@@ -66,7 +66,7 @@ mulailah dari mana kamu berada.
 
     <br>
     <div class="input-box">
-        <iconify-icon icon="mdi:lock" height="30" style="color:gray;padding:10px;position: absolute;"></iconify-icon>
+        <iconify-icon icon="mdi:lock" height="30" style="color:gray;padding:10px;position:absolute;"></iconify-icon>
         <input class="input-field" type="password" id="password" name="password" placeholder="Password" style="padding-left:50px">
         
         @error('password')

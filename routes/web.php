@@ -40,6 +40,7 @@ Route::post('/dashboard/produk/{id}/edit',[ProdukController::class,'update']);
 Route::delete('/dashboard/produk/{id}',[ProdukController::class,'destroy']);
 
 Route::get('/dashboard/pegawai',[DashboardController::class,'pegawai'])->middleware('auth');
+Route::get('/dashboard/pegawai/{id}/show',[PegawaiController::class,'show'])->middleware('auth');
 Route::get('/dashboard/pegawai/tambah',[PegawaiController::class,'index'])->middleware('auth');
 Route::post('/dashboard/pegawai/tambah',[PegawaiController::class,'create']);
 Route::post('/dashboard/pegawai/{id}/edit',[PegawaiController::class,'update']);
@@ -52,4 +53,5 @@ Route::post('/dashboard/stok/create',[StokController::class,'store']);
 Route::get('/dashboard/stok/{pegawai_id}/{tanggal}/edit',[StokController::class,'edit'])->middleware('auth');
 Route::post('/dashboard/stok/{pegawai_id}/{tanggal}/edit',[StokController::class,'update']);
 Route::delete('/dashboard/stok/{pegawai_id}/{tanggal}/delete',[StokController::class,'destroy']);
+Route::get('/dashboard/stok/{pegawai_id}/{tanggal}/show',[StokController::class,'show']);
 

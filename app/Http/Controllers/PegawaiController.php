@@ -55,9 +55,17 @@ class PegawaiController extends Controller
      * @param  \App\Models\Pegawai  $pegawai
      * @return \Illuminate\Http\Response
      */
-    public function show(Pegawai $pegawai)
+    public function show($id)
     {
-        //
+        
+            $pegawai = Pegawai::where('id', $id)
+            ->get();
+            
+            return view('isi.pegawai.view', [
+            'pegawai' => $pegawai
+    
+    
+    ]);
     }
 
     /**

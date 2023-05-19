@@ -30,6 +30,8 @@ class StokController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function create()
     {
 
@@ -130,9 +132,26 @@ class StokController extends Controller
      * @param  \App\Models\Stok  $stok
      * @return \Illuminate\Http\Response
      */
-    public function show(Stok $stok)
+    public function show($pegawai_id,$tanggal)
     {
-        //
+        $stok = Stok::where('pegawai_id', $pegawai_id)
+        ->where('tanggal', $tanggal)
+        ->with('produk')
+        ->get();
+
+
+        $hasil = Stok::where('pegawai_id' ,$pegawai_id)
+            ->where('tanggal',$tanggal)
+            ->sum('total');
+
+
+
+        return view('isi.stok.view', [
+        'stok' => $stok,
+        'hasil' => $hasil,
+
+
+]);
     }
 
     /**

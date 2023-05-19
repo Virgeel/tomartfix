@@ -5,8 +5,8 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
-<div>
-    <canvas id="myChart" style="background-color:white;border-radius:15px;padding:10px;" width="800px;" height="300px;"></canvas>
+<div class="item3">
+    <canvas id="myChart" style="background-color:white;border-radius:15px;padding:10px;" width="" height="300px;"></canvas>
 </div>
 
 
