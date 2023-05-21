@@ -13,7 +13,9 @@
 
             <div class="parent">
 
-                <iconify-icon icon="material-symbols:arrow-right-alt-rounded" rotate="180deg" width="50"></iconify-icon>
+                <a href="/dashboard/stok" style="text-decoration: none;color:#5A5F49">
+                    <iconify-icon icon="material-symbols:arrow-right-alt-rounded" rotate="180deg" width="50"></iconify-icon>
+                </a>
                 <div style="padding-left : 20px;padding-top:8px;">
                     Buat Stok
                 </div>
