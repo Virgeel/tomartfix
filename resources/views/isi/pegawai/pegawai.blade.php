@@ -106,13 +106,13 @@
                     <div style="padding-top:10px;padding-right:20px;">
                         <img src="{{$employee->foto}}" width="50px;" height="50px;" style="border-radius:50%;">
                     </div>             
-               <div class="modal-btn" style="padding-bottom:10px;padding-top:20px;" data-modal-id="modal{{$employee->id}}">
+               <div class="modal-btn" style="padding-bottom:10px;padding-top:20px;" data-modal-id="modal{{$employee->id}}" onclick="initSinglePinMap({{$employee->id}}, {{$employee->latitude}}, {{$employee->longitude}})">
                 
                     {{$employee -> nama}}
 
                 {{-- Ini Modal   --}}
                 <div id="modal{{$employee->id}}" class="modal">
-                    <div class="modal-content" style="width: 20%;">
+                    <div class="modal-content" style="width: 30%;">
                         <div class="modal-header" style="background-color: #B3C279">
                             {{-- <span class="close">&times;</span> --}}
                             <h2 style="font-weight: 100">Informasi Pegawai</h2>
@@ -122,10 +122,30 @@
                             <p> Nama : {{$employee->nama}}</p>
                             <p> Alamat : {{$employee->alamat}}</p>
                             <p> Nomor : {{$employee->telfon}}</p>
-                            <p> <div id="mapsingle" style="height:300px;width:300px;"> </div>
+                            <p> <div id="singlePinMap{{$employee->id}}" style="height:300px;width:300px;"></div>
+                                <div style="padding:20px;"></div>
                         </div>
                     </div>
                 </div>
+
+                
+                <script>
+                    // Function to initialize the map with a single pin
+                    function initSinglePinMap(employeeId, latitude, longitude) {
+                        var employeeCoordinates = {lat: latitude, lng: longitude};
+                        var map = new google.maps.Map(document.getElementById('singlePinMap' + employeeId), {
+                            center: employeeCoordinates,
+                            zoom: 15
+                        });
+                        var marker = new google.maps.Marker({
+                            position: employeeCoordinates,
+                            map: map,
+                            title: "{{$employee->nama}}"
+                        });
+                    }
+                </script>
+
+                
                 </div>
                 </div>
             </td>
@@ -254,20 +274,6 @@
 
 </script>
 
-<script>
-    function initMapSingle() {
-      var employeeCoordinates = {lat: {{$employee->latitude}}, lng: {{$employee->longitude}}};
-      var map = new google.maps.Map(document.getElementById('mapsingle'), {
-        center: employeeCoordinates,
-        zoom: 15
-      });
-      var marker = new google.maps.Marker({
-        position: employeeCoordinates,
-        map: map,
-        title: "{{$employee->nama}}"
-      });
-    }
-  </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6l0C43EnQe26PmkVwHpfHzg5Z3oxvzX8&callback=initMap" async defer></script>
 
