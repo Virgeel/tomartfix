@@ -219,7 +219,7 @@
    function initMap() {
     var mapOptions = {
         center: {lat: -7.828869, lng: 112.032570}, // Replace with the desired center coordinates
-        zoom: 13
+        zoom: 14
     };
     
     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
@@ -230,32 +230,27 @@
             position: {lat: {{ $employee->latitude }}, lng: {{ $employee->longitude }}},
             map: map,
             label: {
-        text: "{{ $employee->nama }}",
-        color: '#FFFFFF',
-        fontSize: '11px',
-      }
+                text: "{{ $employee->nama }}",
+                color: '#FFFFFF',
+                fontSize: '11px',
+            }
         });
 
-        // Add code to create a polygon for each employee's area
-        var areaCoordinates = [
-            // Define the coordinates of the polygon area
-            // Replace the coordinates with the desired shape
-            {lat: {{ $employee->latitude }}, lng: {{ $employee->longitude }}},
-            // Add more coordinates if needed
-        ];
-
-        var area = new google.maps.Polygon({
-            paths: areaCoordinates,
+        // Add code to create a circular area for each employee
+        var circle = new google.maps.Circle({
+            map: map,
+            center: {lat: {{ $employee->latitude }}, lng: {{ $employee->longitude }}},
+            radius: 200, // Replace with the desired radius in meters
             strokeColor: '#FF0000',
             strokeOpacity: 0.8,
             strokeWeight: 2,
             fillColor: '#FF0000',
-            fillOpacity: 0.35,
-            map: map
+            fillOpacity: 0.35
         });
-        area.setMap(map);
+        circle.setMap(map);
     @endforeach
 }
+
 
 </script>
 
@@ -272,7 +267,6 @@
         title: "{{$employee->nama}}"
       });
     }
-    initMapSingle();
   </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6l0C43EnQe26PmkVwHpfHzg5Z3oxvzX8&callback=initMap" async defer></script>
