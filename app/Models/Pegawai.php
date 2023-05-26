@@ -17,7 +17,9 @@ class Pegawai extends Model
         'nama',
         'alamat',
         'telfon',
-        'foto'
+        'foto',
+        'latitude',
+        'longitude'
     ];
 
     

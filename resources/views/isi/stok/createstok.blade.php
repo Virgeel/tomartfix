@@ -51,7 +51,7 @@
                             placeholder="Pilih pegawai"
                             style="width:250px;height:43px;padding-top:10px;border:none;">
 
-                            <iconify-icon icon="fluent:people-community-24-filled" height="20">
+                            <iconify-icon icon="fluent:people-community-24-filled" height="20" >
                             </iconify-icon>
 
                             <option selected> Pilih Pegawai </option>

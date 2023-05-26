@@ -23,7 +23,7 @@
     <div class="item3" style="padding-top:20px;">
 
         <div
-            style="width:375px;height:600px;background-color:white;font-family:Poppins;padding-top:60px;padding-left:80px;padding-bottom:60px;font-weight:bold;color:#5A5F49;border-radius:30px;">
+            style="width:375px;height:725px;background-color:white;font-family:Poppins;padding-top:60px;padding-left:80px;padding-bottom:60px;font-weight:bold;color:#5A5F49;border-radius:30px;">
             Isi form dibawah ini dengan sesuai
 
             <div style="padding-top:40px;" type="hidden">
@@ -52,12 +52,27 @@
                             <input class="formbar" type="text" id="foto" name="foto" placeholder="Link gambar"
                                 style="width:80%;">
 
+                                <p>
+                                    <label for="latitude"> Latitude</label>
+                                    <br>
+                                    <input class="formbar" type="text" id="latitude" name="latitude"
+                                        placeholder="latitude" style="width:80%;">
+
+                                    <p>
+                                        <label for="longitude"> Longitude</label>
+                                        <br>
+                                        <input class="formbar" type="text" id="longitude" name="longitude"
+                                            placeholder="longitude" style="width:80%;">
+
                             <div style="padding-top:30px;padding-left:60px;">
                                 <input type="submit" value="Tambah Pegawai" style="background-color:#B3C279">
-
+                                
+                                
                             </div>
 
             </form>
+
+            <div style="padding:20px;"></div>
 
         </div>
 

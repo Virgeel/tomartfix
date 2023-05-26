@@ -32,6 +32,8 @@ class PegawaiController extends Controller
             'alamat' => 'required',
             'telfon' => 'required',
             'foto' => '',
+            'latitude' => '',
+            'longitude' => '',
         
         
 
@@ -96,6 +98,8 @@ class PegawaiController extends Controller
             'alamat' => 'required',
             'telfon' => 'required',
             'foto' => '',
+            'latitude' => '',
+            'longitude' => '',
         
     ]);
 
@@ -103,7 +107,9 @@ class PegawaiController extends Controller
         'nama' => $request->nama,
         'alamat' => $request->alamat,
         'telfon' => $request->telfon,
-        'foto' => $request->foto
+        'foto' => $request->foto,
+        'latitude' => $request->latitude,
+        'longitude' => $request->longitude,
     ]);
 
     return redirect('/dashboard/pegawai')->with('updated','Item telah diupdate!');

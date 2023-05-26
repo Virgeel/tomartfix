@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('alamat');
             $table->string('telfon');
             $table->string('foto')->nullable();
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
         });
     }
 

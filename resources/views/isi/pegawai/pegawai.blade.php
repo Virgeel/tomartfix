@@ -58,6 +58,9 @@
 
 
 <div class="item3 grid-item-left">
+    
+    <div id="map" style="height:400px;width:600px;border-radius:10px"></div>
+
 @if($pegawai -> count())
 <div style="padding-top:50px" type="hidden">
 
@@ -119,6 +122,7 @@
                             <p> Nama : {{$employee->nama}}</p>
                             <p> Alamat : {{$employee->alamat}}</p>
                             <p> Nomor : {{$employee->telfon}}</p>
+                            <p> <div id="mapsingle" style="height:300px;width:300px;"> </div>
                         </div>
                     </div>
                 </div>
@@ -211,8 +215,71 @@
    
 </div>
 
+<script>
+   function initMap() {
+    var mapOptions = {
+        center: {lat: -7.828869, lng: 112.032570}, // Replace with the desired center coordinates
+        zoom: 13
+    };
+    
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    @foreach ($pegawai as $employee)
+        // Add code to create a marker for each employee
+        var marker = new google.maps.Marker({
+            position: {lat: {{ $employee->latitude }}, lng: {{ $employee->longitude }}},
+            map: map,
+            label: {
+        text: "{{ $employee->nama }}",
+        color: '#FFFFFF',
+        fontSize: '11px',
+      }
+        });
+
+        // Add code to create a polygon for each employee's area
+        var areaCoordinates = [
+            // Define the coordinates of the polygon area
+            // Replace the coordinates with the desired shape
+            {lat: {{ $employee->latitude }}, lng: {{ $employee->longitude }}},
+            // Add more coordinates if needed
+        ];
+
+        var area = new google.maps.Polygon({
+            paths: areaCoordinates,
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35,
+            map: map
+        });
+        area.setMap(map);
+    @endforeach
+}
+
+</script>
+
+<script>
+    function initMapSingle() {
+      var employeeCoordinates = {lat: {{$employee->latitude}}, lng: {{$employee->longitude}}};
+      var map = new google.maps.Map(document.getElementById('mapsingle'), {
+        center: employeeCoordinates,
+        zoom: 15
+      });
+      var marker = new google.maps.Marker({
+        position: employeeCoordinates,
+        map: map,
+        title: "{{$employee->nama}}"
+      });
+    }
+    initMapSingle();
+  </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6l0C43EnQe26PmkVwHpfHzg5Z3oxvzX8&callback=initMap" async defer></script>
 
 @endsection
+
+
 
 
   
