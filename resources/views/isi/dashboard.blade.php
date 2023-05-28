@@ -26,34 +26,7 @@
 
     <div style="padding-right : 100px;padding-top : 30px;">
         <div style="border-radius:15;width:200;height:40;box-shadow:none;">
-            <div class="parent">
-                <div style="padding-left:15px;padding-top:10px">
-                    <iconify-icon icon="fluent:people-community-24-filled" height="20" style=""></iconify-icon>
-                </div>
-                
-                <select class = "profilbar" type="text" id="pegawai_id" name="pegawai_id" placeholder="Pilih pegawai" style="position:absolute;width:250px;height:43px;padding-top:10px;border:none;font-weight:bold;color:5A5F49" value="{{request('filterpenjualan')}}" >
-                                   
-                    <iconify-icon icon="fluent:people-community-24-filled" height="20" >
-                    </iconify-icon>
-                        
-                            
-                    <option selected> Pilih Pegawai </option>
-                    
-                    
-                        @foreach($pegawai as $employee)
-    
-                        <option value="{{$employee->id}}">{{$employee->nama}}</option>
-                        @endforeach
-    
-                </select>
-
-                <div style="padding-top:5px;padding-left:70px;">
-                    <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded" height="30" style=""></iconify-icon>
-
-                </div>
-
-            </div>
-           
+            
            
         
         </div>
@@ -164,19 +137,28 @@
 <div class="column item4" style="padding-top:20px;padding-left:20px;">
 
     <div class="profilbar" style="width:350px;color:5A5F49">
-
-                <div style="padding-top:10px;padding-left:60px;font-size:15px;padding-bottom:5px;">
-                Halo,
-                <br>
-                <div style="font-weight:bold;font-size:20">
-                @if(auth()->user()->level=='admin')
-                    Admin {{auth()-> user()->nameawal}}
-                @elseif(auth()->user()->level=='owner')
-                    Owner {{auth()-> user()->nameawal}}
-                @endif
-                    
-                </div>
-                </div>
+        <div class="parent" style="padding-left:10px;">
+            <div style="padding:10px;">
+                <img src= "{{asset('images/pp.png')}}" width="50">
+            </div>
+            <div>
+                <div style="padding-top:10px;font-size:15px;padding-bottom:5px;">
+                    Halo,
+                    <br>
+                    <div style="font-weight:bold;font-size:20">
+                    @if(auth()->user()->level=='admin')
+                        Admin {{auth()-> user()->nameawal}}
+                    @elseif(auth()->user()->level=='owner')
+                        Owner {{auth()-> user()->nameawal}}
+                    @endif
+                        
+                    </div>
+                    </div>
+            </div>
+            
+        </div>
+        
+               
         
     </div>
     <div style="padding-top:20px;"> 
